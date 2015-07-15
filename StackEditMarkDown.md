@@ -1,8 +1,8 @@
-```sequence
+de
 prod->prod: git branch staging origin/prod
 prod-->pre: git checkout pre
 pre->pre: git push -u origin pre
-pre->pre: git branch development origin/pre
+pre->pre: git branch dev origin/pre
 pre-->dev: git checkout dev
 dev->dev: git push -u origin dev
 dev->dev: git pull
@@ -16,7 +16,7 @@ dev-->[branch]_[type]_[issue_number]_summary: git checkout [branch]_[type]_[issu
 [branch]_[type]_[issue_number]_summary->[branch]_[type]_[issue_number]_summary: git push -u origin [branch]_[type]_[issue_number]_summary
 Note right of [branch]_[type]_[issue_number]_summary: Ready for Code Review
 Note left of [branch]_[type]_[issue_number]_summary: If Code Review was  declined.\n Fix the errors.
-[branch]_[type]_[issue_number]_summary-->development: git checkout development
+[branch]_[type]_[issue_number]_summary-->dev: git checkout dev
 dev->dev: git pull
 dev-->[branch]_[type]_[issue_number]_summary: git checkout [branch]_[type]_[issue_number]_summary
 [branch]_[type]_[issue_number]_summary->[branch]_[type]_[issue_number]_summary: git rebase -i origin/dev
