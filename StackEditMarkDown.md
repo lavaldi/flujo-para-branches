@@ -1,4 +1,4 @@
-de
+```sequence
 prod->prod: git branch staging origin/prod
 prod-->pre: git checkout pre
 pre->pre: git push -u origin pre
